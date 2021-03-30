@@ -1,0 +1,91 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color:rgb(46, 46, 49);
+    display: flex;
+    flex-direction: column;
+    justify-content:baseline;
+    align-items: center;
+    color: rgb(197, 203, 214); 
+}
+
+
+select{
+    font-size: 1.5rem;
+    padding: 1em 4em 1em 1.5em;
+    background-color:rgba(68, 68, 68,.8);
+    color: rgb(197, 203, 214);  
+    border:0;
+}
+
+.custom-select{
+    position:relative;
+}
+
+.custom-arrow{
+    position:absolute;
+    top:0;
+    right:0;
+    display: block;
+    background-color: rgb(37, 37, 37);
+    filter: blur(5);
+    height: 100% ;
+    width: 4em;
+    pointer-events: none;
+}
+
+.custom-arrow::before, .custom-arrow::after{
+    --size: 0.75em;
+    content:'';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.custom-arrow::before{
+
+    border-left:var(--size) solid transparent ;
+    border-right:var(--size) solid transparent ;
+    border-bottom:var(--size) solid rgba(197, 203, 214,0.5);
+    top:42%;
+}
+
+.custom-arrow::after{
+
+    border-left:var(--size) solid transparent ;
+    border-right:var(--size) solid transparent ;
+    border-top:var(--size) solid rgba(197, 203, 214,0.5);
+    top:62%;
+
+}
+
+
+ /* ------- SCROLLBAR----   */
+
+/* width */
+::-webkit-scrollbar {
+width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: rgb(37, 37, 37);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background:rgb(197, 203, 214); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background:rgb(181, 183, 187);
+}
+
+
+
